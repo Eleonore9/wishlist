@@ -3,6 +3,7 @@ $(document).ready(function() {
   $("button#add-to-list").on('click', function() {
   	$item = $("#item").val()
   	addToList($item);
+  	$("#item").val("")
   })
 });
 
