@@ -4,6 +4,7 @@ $(document).ready(function() {
   	$item = $("#item").val()
   	addToList($item);
   	$("#item").val("")
+  	$("#item").focus()
   })
 });
 
