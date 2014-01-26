@@ -15,9 +15,11 @@ $(document).ready(function() {
   		parent_node.addClass("completed");
 		$('<span class="label success">Done!</span>').appendTo(parent_node);
 		$(this).remove();
+		updateTotal();
   	});
 	$("span.label.success").on('click', function() {
 		$(this).parent().remove();
+		updateTotal();
 	});
   })
 
@@ -26,4 +28,13 @@ $(document).ready(function() {
 function addToList(item){
 	//Takes in an element and appends it to the list in a li tag with the 'pending' label
 	$("ol#items").append("<li>" + item + "<span class='label pending'>Pending</span>" + "</li>");
+	updateTotal();
+};
+
+function updateTotal() {
+	//No arg, display the number of items pending or completed
+	var pending = $("li span.label.pending").length;
+	console.log(pending);
+	var completed = $("li span.label.success").length;
+	console.log(completed);
 };
