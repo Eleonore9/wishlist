@@ -72,7 +72,9 @@ ol#items li {
 .label.success {
   background-color: #2a8930;
 }
-
+li.completed span.label.success {
+	text-decoration: none;
+}
 .total {
   float: right;
 }

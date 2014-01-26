@@ -13,8 +13,12 @@ $(document).ready(function() {
   	$("span.label.pending").on('click', function() {
   		parent_node = $(this).parent();
   		parent_node.addClass("completed");
-		parent_node.remove();
+		$('<span class="label success">Done!</span>').appendTo(parent_node);
+		$(this).remove();
   	});
+	$("span.label.success").on('click', function() {
+		$(this).parent().remove();
+	});
   })
 
 });
