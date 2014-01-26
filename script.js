@@ -34,7 +34,8 @@ function addToList(item){
 function updateTotal() {
 	//No arg, display the number of items pending or completed
 	var pending = $("li span.label.pending").length;
-	console.log(pending);
+	console.log('P: '+ pending);
 	var completed = $("li span.label.success").length;
-	console.log(completed);
+	console.log('C: ' + completed);
+	$(".total").text("Pending: " + pending + " Completed: " + completed);
 };
